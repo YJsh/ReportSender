@@ -1,12 +1,17 @@
 <template>
   <div class="hello">
+    <!--<toolkit></toolkit>-->
+    <r-canvas></r-canvas>
   </div>
 </template>
 
 <script>
 
+import RCanvas from "./RCanvas";
+import Toolkit from "./Toolkit";
 export default {
   name: 'HelloWorld',
+  components: {Toolkit, RCanvas},
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
