@@ -3,15 +3,17 @@
     <div class="title">{{title}}</div>
     <div style="min-height: 20px">
       <r-table></r-table>
+      <r-editor></r-editor>
     </div>
   </div>
 </template>
 
 <script>
   import RTable from "./RTable";
+  import REditor from "./REditor";
   export default {
     name: "RWindow",
-    components: {RTable},
+    components: {REditor, RTable},
     data() {
       return {
         title: "这是一个Window"

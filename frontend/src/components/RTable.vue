@@ -1,6 +1,10 @@
 <template>
-  <el-table :data="tableData" border size="mini">
-    <el-table-column v-for="col in colNum" :key="col" label=""></el-table-column>
+  <el-table :data="tableData" border :show-header="false">
+    <el-table-column v-for="(col, index) in colNum" :key="col" label="">
+      <template slot-scope="scope">
+        {{scope.row[index]}}
+      </template>
+    </el-table-column>
   </el-table>
 </template>
 
